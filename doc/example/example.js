@@ -2,10 +2,10 @@
 
 const options = {
     hosts: {
-        domain: 'jitsi-meet.example.com',
-        muc: 'conference.jitsi-meet.example.com' // FIXME: use XEP-0030
+        domain: 'streamsofconsciousness.samenschool.org',
+        muc: 'conference.streamsofconsciousness.samenschool.org' // FIXME: use XEP-0030
     },
-    bosh: '//jitsi-meet.example.com/http-bind', // FIXME: use xep-0156 for that
+    bosh: '//streamsofconsciousness.samenschool.org/http-bind', // FIXME: use xep-0156 for that
 
     // The name of client node advertised in XEP-0115 'c' stanza
     clientNode: 'http://jitsi.org/jitsimeet'
@@ -209,7 +209,7 @@ function switchVideo() { // eslint-disable-line no-unused-vars
         localTracks.pop();
     }
     JitsiMeetJS.createLocalTracks({
-        devices: [ isVideo ? 'video' : 'desktop' ]
+        devices: [isVideo ? 'video' : 'desktop']
     })
         .then(tracks => {
             localTracks.push(tracks[0]);
@@ -261,7 +261,7 @@ JitsiMeetJS.mediaDevices.addEventListener(
 
 connection.connect();
 
-JitsiMeetJS.createLocalTracks({ devices: [ 'audio', 'video' ] })
+JitsiMeetJS.createLocalTracks({ devices: ['audio', 'video'] })
     .then(onLocalTracks)
     .catch(error => {
         throw error;
